@@ -1,0 +1,245 @@
+%%%%%%%%%%%%%%%%%
+% Dies ist ein Beispiel-Lebenslauf, erstellt mit altacv.cls (v1.6.4, 13. November 2021) von
+% LianTze Lim (liantze@gmail.com), basierend auf dem
+% BusinessInsider-Lebenslauf unter http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% Dieser Lebenslauf kann unter den Bedingungen der LaTeX Project Public License, Version 1.3,
+%% verteilt oder modifiziert werden, oder (nach Ihrer Wahl) einer späteren Version.
+%% Die neueste Version dieser Lizenz finden Sie unter
+%% http://www.latex-project.org/lppl.txt
+%% und Version 1.3 oder höher ist in allen LaTeX-Distributionen
+%% ab 01.12.2003 oder später enthalten.
+%%%%%%%%%%%%%%%%
+
+%% Verwenden Sie die Option "normalphoto", wenn Sie ein reguläres Foto anstelle eines kreisförmigen möchten
+\documentclass[9pt,a4paper,withhyper]{altacv}
+
+%% AltaCV verwendet das Paket fontawesome5.
+%% Siehe http://texdoc.net/pkg/fontawesome5 für eine vollständige Liste der Symbole.
+
+% Passen Sie das Seitenlayout bei Bedarf an
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1cm}
+
+% Das Paket paracol ermöglicht das Festlegen von Textspalten parallel
+\usepackage{paracol}
+\usepackage{xcolor}
+\pagecolor{tan!15!white}
+
+% Ändern Sie die Schriftart je nachdem, ob
+% Sie pdflatex oder xelatex/lualatex verwende
+\iftutex
+  % Bei Verwendung von xelatex oder lualatex:
+  \setmainfont{Lato}
+\else
+  % Bei Verwendung von pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Ändern Sie die Farben bei Bedarf
+\definecolor{umber}{HTML}{352315}
+\definecolor{tawny}{HTML}{80471C}
+\definecolor{syrup}{HTML}{481F01}
+\colorlet{heading}{syrup}
+\colorlet{headingrule}{syrup}
+\colorlet{accent}{tawny}
+\colorlet{emphasis}{umber}
+\colorlet{body}{umber}
+
+% Ändern Sie bei Bedarf einige Schriften
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Ändern Sie die Symbole für itemize und Bewertungsmarker
+% bei \cvskill bei Bedarf
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Anirudh Singh}
+\photoR{4cm}{static/profile.png}
+\personalinfo{
+  \email{anirudh.sai8296@gmail.com}
+  \linkedin{anirudhsingh8296}
+  \github{ani-4nirudh}
+}
+
+\makecvheader
+
+\columnratio{0.6}
+
+\begin{paracol}{2}
+
+\cvsection{Berufserfahrung}
+\cvevent{Software Support Engineer}{NEURA Robotics}{November 2025 -- Heute}{Metzingen, Deutschland}
+  \begin{itemize}
+    \item Unterstützung des Kundenservices bei komplexen technischen Problemen
+    \item Zusammenarbeit mit Entwicklungsteams bei Test, Reproduktion und Debugging von Software-Features
+    \item Mitwirkung an der Test- und Entwicklung neuer Features über den gesamten Software-Stack
+    \item Entwicklung interner Tools: Robot Deployment Virtual Machine Tool, Logger Tool für Robot Motion Benchmarking, Automatisierungstools
+\end{itemize}
+
+\divider
+
+\cvevent{Support \& Applications Engineer}{Cambrian Robotics GmbH}{März 2024 -- August 2025}{Augsburg, Deutschland}
+\begin{itemize}
+    \item Programmierung von Industrie- und kollaborativen Robotern für Machbarkeitsstudien  
+    \item Entwicklung und Optimierung von APIs für Robotiksoftware  
+    \item Durchführung von Development Testing, Debugging und Validierung  
+    \item Technischer Kundensupport, einschließlich Roboterprogrammierung und Automatisierungsberatung  
+    \item Projektmanagement von der Konzeptphase bis zur Umsetzung  
+    \item Entwicklung und Integration mechatronischer Systeme, einschließlich Sensorintegration mit Robotersteuerungen (GPIO, PCB-Design)  
+    \item Erstellung von CAD-Modellen und 3D-gedruckten Komponenten für individuelle Hardwarelösungen  
+\end{itemize}
+
+\divider
+
+\cvevent{Masterarbeit}{RWTH Aachen LLT - Lehrstuhl für Lasertechnik}{März 2023 -- Dezember 2023}{Aachen, Deutschland}
+\begin{itemize}
+    \item Ziel: Identifizierung von Ungenauigkeiten in der Roboter-TCP (Tool Center Point) Position und Geschwindigkeitsmessungen mithilfe eines onboard-montierten Sensors
+    \item Entwicklung eines Laser-Kamera-Sensor-Konzepts zur Positionsbestimmung mithilfe von Bildverarbeitung auf Laser-Speckle-Bildern
+    \item Programmierung klassischer Bildverarbeitungstechniken in C++
+    \item Identifizierung und Testung der Wirksamkeit von quantitativen Bildqualitätskriterien für Laser-Speckle-Bilder
+    \item Note: 1,3
+\end{itemize}
+
+\divider
+
+\cvevent{Werkstudent}{RWTH Aachen IP - Lehrstuhl für Individualisierte Bauproduktion}{Mai 2022 -- Februar 2023}{Aachen, Deutschland}
+\begin{itemize}
+\item Trainieren eines YOLO-NN für die Erkennung des Schutzausrüstung (PSA) anhand eines benutzerdefinierten Datensatzes durch Transfer Learning
+\item Aufbau grundlegender Kenntnisse in Linux-Netzwerken und der Einrichtung von ROS-Netzwerken für die Kommunikation über einen 5G-Router (Master und Slave)
+\item Anwendung von RADAR, LIDAR und 3D-Kameras in Verbindung mit ROS 1 (Noetic) für SLAM (Simultaneous Localization and Mapping)
+\item Implementierung von Visual SLAM mithilfe der ORBSLAM3- und RTABMAP-Packages
+\item Konfiguration eines eigenständigen Systems mithilfe eines Jetson Xavier NX für die Fernsteuerung eines Innok-Roboters über ein 5G-Netzwerk
+\end{itemize}
+
+\divider
+
+\cvevent{Tutor - ROS Summer School 2022}{FH Aachen}{15. Aug 2022 -- 29. Aug 2022}{Aachen, Deutschland}
+
+\begin{itemize}
+\item Woche 1: Lehre der Grundlagen von ROS2 (Gazebo, AprilTag-Erkennung)
+\item Woche 2: Lehre der Grundlagen von ROS2 Navigation, Lokalisierung und Mapping
+\end{itemize}
+
+\cvsection{Projekte}
+\cvevent{Computer Vision und Deep Learning mit Nvidia Jetson Nano}{FH Aachen}{}{}
+\begin{itemize}
+\item Objekterkennung und -verfolgung mit einer montierten Kamera auf Servomotoren
+\item Gesichtserkennung und Gesichtsdetektion mit der jetson-inference NVIDIA-Library und OpenCV
+\item Training eines Deep-NN mit Transfer Learning
+\item Objekt-Tracking mit Konturerkennung und HSV-Farbraum
+\item Grundlegende Bildverarbeitungstechniken (Thresholding, Masking)
+\end{itemize}
+
+\divider
+
+\cvevent{Robotik-Kunstgalerie}{FH Aachen}{}{}
+\begin{itemize}
+\item Inspektion einer "Kunstgalerie" durch einen Roboter in einer Gazebo-ROS-Simulation
+\item Objekterkennung mit OpenVINO und YOLOX-NN ROS-Package
+\item Autonome Navigation des Turtlebot in der Simulation
+\item Implementierung der AprilTag-Erkennung
+\end{itemize}
+
+\divider
+
+\cvevent{Softwarearchitektur für autonomen elektrischen Kart}{FH Aachen}{}{}
+\begin{itemize}
+\item Verwendung von LIDAR mit ROS 2 (Foxy) für Mapping
+\item Verwendung einer 3D-Kamera für Objekt- und Feature-Detektion mit ROS 2 (Foxy)
+\item Sensorfusion von LIDAR und 3D-Kamera für SLAM
+\end{itemize}
+
+\divider
+
+% \cvevent{Linienfolger-Roboter}{FH Aachen}{}{}
+% \begin{itemize}
+% \item Verwendung von Servos, Ultraschall zur Kollisionserkennung
+% \item Infrarotsensoren zur Linienerkennung
+% \item Entwurf eines Webservers zur Fernsteuerung des Roboters mit ESP32 und Arduino Uno
+% \end{itemize}
+
+\switchcolumn
+
+\cvsection{Studium}
+
+\cvevent{M.Sc.\ in Mechatronik}{Fachhochschule Aachen}{Oktober 2020 -- Dezember 2023}{}
+\begin{itemize}
+    \item Masterarbeit: Development of Laser-Speckle based Velocity Sensor for Robot Tool Center Point Motion
+    \item Abschlussnote: 1,7
+\end{itemize}
+
+\divider
+
+\cvevent{B.Sc.\ in Fahrzeugtechnik}{VIT University}{Juni 2014 -- Mai 2018}{}
+\begin{itemize}
+    \item Bachelorarbeit: Design and Development of Stanley-Meyer Cell with Production and Optimization of Brown's Gas 
+    \item Abschlussnote: 1,4
+\end{itemize}
+
+\cvsection{Sprachen}
+
+\textbf{Deutsch} \hspace{1.02cm} C1 -- TestDaF \\
+\textbf{Englisch} \hspace{1.05cm} Muttersprache \\
+\textbf{Hindi} \hspace{1.48cm} Muttersprache
+
+\cvsection{Publikation}
+\cvachievement{\faCertificate} 
+{\href{https://www.dgao-proceedings.de/download/125/125_p10.pdf}{Investigation of laser spot size on relative position displacement sensing using laser speckle imaging}}{DGaO - Deutsche Gesellschaft für angewandte Optik, 2024}
+
+\cvsection{Fähigkeiten}
+% Skills go here.
+\cvtag{Linux}
+\cvtag{Flask API}
+\cvtag{Git}
+\cvtag{Python} \\
+\cvtag{C++}
+\cvtag{Rechnernetze} \\
+\cvtag{Gripper Integration}
+\cvtag{Cameras} \\
+\cvtag{Image Processing}
+\cvtag{Bash Scripting} \\
+\cvtag{Robot Programming: RAPID, FANUC} \\
+\cvtag{OpenCV}
+\cvtag{ROS 2}
+\cvtag{Gazebo}
+
+\cvdivider
+
+\newpage
+
+\cvsection{Auszeichnungen}
+
+\cvachievement{\faTrophy}{4 Stipendien}{erhalten in den Jahren 2014-18 für akademische Leistungen}
+
+\divider
+
+\cvachievement{\faStar}{Medaille für den besten Bachelorabschluss im Jahrgang 2018}{}
+
+% \cvsection{Referenzen}
+% References go here.
+
+\cvsection{Hobbies}
+% Hobbies go here.
+\cvtag{Longboarding}
+\cvtag{Biking}
+\cvtag{Coding} \\
+\cvtag{Cooking}
+\cvtag{Musik}
+\cvtag{Hiking}
+
+\cvsection{Interessen}
+% Interests go here.
+\cvtag{Robotics}
+\cvtag{IoT}
+\cvtag{Rust}
+\cvtag{Embedded Programming} \\
+\cvtag{Software-Automation} \\
+\cvtag{Computer Vision}
+
+\end{paracol}
+
+\end{document}
