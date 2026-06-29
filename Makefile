@@ -1,2 +1,3 @@
-pdf: 
-	latexmk -pvc -pdf -jobname="lebenslauf" -outdir=./latex_out -f ./src/main.tex 
+SRC ?= main
+pdf:
+	latexmk -pvc -pdf -jobname="lebenslauf" -outdir=./latex_out -f ./src/$(SRC).tex
