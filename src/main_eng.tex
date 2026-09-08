@@ -18,7 +18,7 @@
 %% Siehe [http://texdoc.net/pkg/fontawesome5](http://texdoc.net/pkg/fontawesome5) für eine vollständige Liste der Symbole.
 
 % Passen Sie das Seitenlayout bei Bedarf an
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1cm}
+\geometry{left=1.25cm,right=1.25cm,top=1.45cm,bottom=1.5cm,columnsep=1cm}
 
 % Das Paket paracol ermöglicht das Festlegen von Textspalten parallel
 \usepackage{paracol}
@@ -59,7 +59,7 @@
 \begin{document}
 \name{Anirudh Singh}
 \photoR{4cm}{static/profile.png}
-\personalinfo{
+\personalinfo {
   \extrainfo{\textcolor{accent}{\faGlobe} \href{https://praani.dev}{praani.dev}}
   \email{anirudh@mailbox.org}
   \github{ani-4nirudh}
@@ -68,84 +68,100 @@
 
 \makecvheader
 
-\columnratio{0.6}
+\columnratio{0.55}
 
 \begin{paracol}{2}
 
 \cvsection{Professional Experience}
-\cvevent{Software Support Engineer}{NEURA Robotics}{November 2025 -- April 2026}{Metzingen, Deutschland}
-  \begin{itemize}
-    \item Supporting customer service with complex technical issues
-    \item Collaborating with development teams on testing, reproduction, and debugging of software features
-    \item Contributing to the testing and development of new features across the full software stack
-    \item Developing internal tools: Robot Deployment Virtual Machine Tool, logger tool for robot motion benchmarking, automation tools
-\end{itemize}
+  \cvevent{Software Support Engineer}{NEURA Robotics}{November 2025 -- April 2026}{Metzingen, Deutschland}
+    \begin{itemize}
+      \item Supporting customer service with complex technical issues
+      \item Collaborating with development teams on testing, reproduction, and debugging of software features
+      \item Contributing to the testing and development of new features across the full software stack
+      \item Developing internal tools: Robot Deployment Virtual Machine Tool, logger tool for robot motion benchmarking, automation tools
+    \end{itemize}
 
-\divider
+  \divider
 
-\cvevent{Support \& Applications Engineer}{Cambrian Robotics GmbH}{March 2024 -- August 2025}{Augsburg, Germany}
-\begin{itemize}
-    \item Programming industrial and collaborative robots for feasibility studies  
-    \item Developing and optimizing APIs for robotics software  
-    \item Performing development testing, debugging, and validation  
-    \item Technical customer support, including robot programming and automation consulting  
-    \item Project management from concept phase to implementation  
-    \item Developing and integrating mechatronic systems, including sensor integration with robot controllers (GPIO, PCB design)  
-    \item Creating CAD models and 3D-printed components for custom hardware solutions  
-\end{itemize}
+  \cvevent{Support \& Applications Engineer}{Cambrian Robotics GmbH}{March 2024 -- August 2025}{Augsburg, Germany}
+    \begin{itemize}
+        \item Programming industrial and collaborative robots for feasibility studies  
+        \item Developing and optimizing APIs for robotics software  
+        \item Performing development testing, debugging, and validation  
+        \item Technical customer support, including robot programming and automation consulting  
+        \item Project management from concept phase to implementation  
+        \item Developing and integrating mechatronic systems, including sensor integration with robot controllers (GPIO, PCB design)  
+        \item Creating CAD models and 3D-printed components for custom hardware solutions  
+    \end{itemize}
 
-\divider
+  \divider
 
-\cvevent{Master Thesis}{RWTH Aachen LLT - Chair of Laser Technology}{March 2023 -- December 2023}{Aachen, Deutschland}
-\begin{itemize}
-    \item Goal: Identifying inaccuracies in robot TCP (Tool Center Point) position and velocity measurements using an onboard-mounted sensor
-    \item Developing a laser-camera sensor concept for position estimation using image processing on laser-speckle images
-    \item Programming classical image processing techniques in C++
-    \item Identifying and testing the effectiveness of quantitative image-quality metrics for laser-speckle images
-    \item Grade: 1.3
-\end{itemize}
+  \cvevent{Master Thesis}{RWTH Aachen LLT - Chair of Laser Technology}{March 2023 -- December 2023}{Aachen, Deutschland}
+    \begin{itemize}
+        \item Goal: Identifying inaccuracies in robot TCP (Tool Center Point) position and velocity measurements using an onboard-mounted sensor
+        \item Developing a laser-camera sensor concept for position estimation using image processing on laser-speckle images
+        \item Programming classical image processing techniques in C++
+        \item Identifying and testing the effectiveness of quantitative image-quality metrics for laser-speckle images
+        \item Grade: 1.3
+    \end{itemize}
 
-\divider
+\cvsection{Skills}
+  \cvtag{Linux}
+  \cvtag{POSIX}
+  \cvtag{Embedded C}
+  \cvtag{Real-time}
+  \cvtag{Flask API}
+  \cvtag{Git}
+  \cvtag{Python}
+  \cvtag{C++}
+  \cvtag{Hardware Integration}
+  \cvtag{Image Processing}
+  \cvtag{Bash Scripting}
+  \cvtag{OpenCV}
+  \cvtag{ROS 2}
+  \cvtag{Gazebo}
 
-\cvevent{Working Student}{RWTH Aachen IP - Chair of Individualized Production}{May 2022 -- February 2023}{Aachen, Deutschland}
-\begin{itemize}
-\item Training a YOLO neural network for detecting personal protective equipment (PPE) using a custom dataset through transfer learning
-\item Building foundational knowledge of Linux networking and setting up ROS networks for communication over a 5G router (master and slave)
-\item Using RADAR, LiDAR, and 3D cameras together with ROS 1 (Noetic) for SLAM (Simultaneous Localization and Mapping)
-\item Implementing visual SLAM using ORB-SLAM3 and RTAB-Map packages
-\item Configuring a standalone system using a Jetson Xavier NX for remote control of an Innok robot over a 5G network
-\end{itemize}
+% \divider
 
-\divider
-
-\cvevent{Tutor - ROS Summer School 2022}{Fachhochschule Aachen}{15. Aug 2022 -- 29. Aug 2022}{Aachen, Deutschland}
-
-\begin{itemize}
-\item Week 1: Taught the basics of ROS2 (Gazebo, AprilTag detection)
-\item Week 2: Taught the basics of ROS2 navigation, localization, and mapping
-\end{itemize}
-
-\cvsection{Projects}
-\cvevent{Computer Vision and Deep Learning with Nvidia Jetson Nano}{Fachhochschule Aachen}{}{}
-\begin{itemize}
-\item Object detection and tracking with a mounted camera on servomotors
-\item Face recognition and face detection with the jetson-inference NVIDIA library and OpenCV
-\item Training a deep neural network with transfer learning
-\item Object tracking with contour detection and HSV color space
-\item Basic image processing techniques (thresholding, masking)
-\end{itemize}
-
-\divider
-
-\cvevent{Robotics Art Gallery}{Fachhochschule Aachen}{}{}
-\begin{itemize}
-\item Inspection of an "art gallery" by a robot in a Gazebo-ROS simulation
-\item Object detection with OpenVINO and YOLOX NN ROS package
-\item Autonomous navigation of the TurtleBot in the simulation
-\item Implementation of AprilTag detection
-\end{itemize}
-
-\divider
+% \cvevent{Working Student}{RWTH Aachen IP - Chair of Individualized Production}{May 2022 -- February 2023}{Aachen, Deutschland}
+% \begin{itemize}
+% \item Training a YOLO neural network for detecting personal protective equipment (PPE) using a custom dataset through transfer learning
+% \item Building foundational knowledge of Linux networking and setting up ROS networks for communication over a 5G router (master and slave)
+% \item Using RADAR, LiDAR, and 3D cameras together with ROS 1 (Noetic) for SLAM (Simultaneous Localization and Mapping)
+% \item Implementing visual SLAM using ORB-SLAM3 and RTAB-Map packages
+% \item Configuring a standalone system using a Jetson Xavier NX for remote control of an Innok robot over a 5G network
+% \end{itemize}
+%
+% \divider
+%
+% \cvevent{Tutor - ROS Summer School 2022}{Fachhochschule Aachen}{15. Aug 2022 -- 29. Aug 2022}{Aachen, Deutschland}
+%
+% \begin{itemize}
+% \item Week 1: Taught the basics of ROS2 (Gazebo, AprilTag detection)
+% \item Week 2: Taught the basics of ROS2 navigation, localization, and mapping
+% \end{itemize}
+%
+% \cvsection{Projects}
+% \cvevent{Computer Vision and Deep Learning with Nvidia Jetson Nano}{Fachhochschule Aachen}{}{}
+% \begin{itemize}
+% \item Object detection and tracking with a mounted camera on servomotors
+% \item Face recognition and face detection with the jetson-inference NVIDIA library and OpenCV
+% \item Training a deep neural network with transfer learning
+% \item Object tracking with contour detection and HSV color space
+% \item Basic image processing techniques (thresholding, masking)
+% \end{itemize}
+%
+% \divider
+%
+% \cvevent{Robotics Art Gallery}{Fachhochschule Aachen}{}{}
+% \begin{itemize}
+% \item Inspection of an "art gallery" by a robot in a Gazebo-ROS simulation
+% \item Object detection with OpenVINO and YOLOX NN ROS package
+% \item Autonomous navigation of the TurtleBot in the simulation
+% \item Implementation of AprilTag detection
+% \end{itemize}
+%
+% \divider
 
 % \cvevent{Softwarearchitektur für autonomen elektrischen Kart}{FH Aachen}{}{}
 % \begin{itemize}
@@ -166,89 +182,64 @@
 \switchcolumn
 
 \cvsection{Education}
+  \cvevent{M.Sc. in Mechatronics}{Fachhochschule Aachen}{October 2020 -- December 2023}{}
+  \begin{itemize}
+    \item \href{https://drive.google.com/file/d/1J5xoOq-rh2UYf5aAfnolYBZ7_LzZLqmU/view}{Master’s thesis: Development of a Laser-Speckle-Based Velocity Sensor for Robot Tool Center Point Motion}
+    \item Final grade: 1.7
+  \end{itemize}
 
-\cvevent{M.Sc. in Mechatronics}{Fachhochschule Aachen}{October 2020 -- December 2023}{}
-\begin{itemize}
-  \item \href{https://drive.google.com/file/d/1J5xoOq-rh2UYf5aAfnolYBZ7_LzZLqmU/view}{Master’s thesis: Development of a Laser-Speckle-Based Velocity Sensor for Robot Tool Center Point Motion}
-  \item Final grade: 1.7
-\end{itemize}
+  \divider
 
-\divider
-
-\cvevent{B.Sc. in Automobile Engineering}{Vellore Institute of Technology, Vellore}{June 2014 -- May 2018}{}
-\begin{itemize}
-    \item Bachelor’s thesis: Design and Development of a Stanley-Meyer Cell with Production and Optimization of Brown’s Gas 
-    \item Final grade: 1.4
-\end{itemize}
+  \cvevent{B.Sc. in Automobile Engineering}{Vellore Institute of Technology, Vellore}{June 2014 -- May 2018}{}
+  \begin{itemize}
+      \item Bachelor’s thesis: Design and Development of a Stanley-Meyer Cell with Production and Optimization of Brown’s Gas 
+      \item Final grade: 1.4
+  \end{itemize}
 
 \cvsection{Languages}
-
-\textbf{Deutsch} \hspace{1.02cm} C1 -- TestDaF \\
-\textbf{Englisch} \hspace{1.05cm} Native \\
-\textbf{Hindi} \hspace{1.45cm} Native
-
-\cvsection{Certifications}
-\cvachievement{\faCertificate} 
-{\href{https://www.coursera.org/verify/WYCY2A5EZ6RG}{Introduction to Realtime Embedded Systems Concepts and Practices}}{University of Boulder Colorado, 2026}
-\cvachievement{\faCertificate} 
-{\href{https://www.coursera.org/verify/WYCY2A5EZ6RG}{Linux Systems Programming and Introduction to Buildroot}}{University of Boulder Colorado, 2026}
-\cvachievement{\faCertificate} 
-{\href{https://www.coursera.org/verify/QGONDNKH2CED}{Introduction to Embedded Systems Software and Development Environments}}{University of Boulder Colorado, 2026}
-\cvachievement{\faCertificate} 
-{\href{https://www.coursera.org/verify/specialization/ZUCSRB5PTGA4}{Open Source Software Development}}{The Linux Foundation, 2025}
+  \textbf{Deutsch} \hspace{1.02cm} C1 -- TestDaF \\
+  \textbf{Englisch} \hspace{1.05cm} Native \\
+  \textbf{Hindi} \hspace{1.45cm} Native
 
 \cvsection{Publication}
-\cvachievement{\faCertificate} 
-{\href{https://www.dgao-proceedings.de/download/125/125_p10.pdf}{Investigation of laser spot size on relative position displacement sensing using laser speckle imaging}}{DGaO - Deutsche Gesellschaft für angewandte Optik, 2024}
+  \cvachievement{\faCertificate} 
+  {\href{https://www.dgao-proceedings.de/download/125/125_p10.pdf}{Investigation of laser spot size on relative position displacement sensing using laser speckle imaging}}{DGaO - Deutsche Gesellschaft für angewandte Optik, 2024}
 
-\newpage
-
-\cvsection{Skills}
-% Skills go here.
-\cvtag{Linux}
-\cvtag{POSIX}
-\cvtag{Embedded C} \\
-\cvtag{Flask API}
-\cvtag{Git}
-\cvtag{Python}
-\cvtag{C++}
-\cvtag{Hardware Integration}
-\cvtag{Image Processing}
-\cvtag{Bash Scripting}
-\cvtag{OpenCV}
-\cvtag{ROS 2}
-\cvtag{Gazebo}
-
-\cvdivider
+\cvsection{Certifications}
+  \cvachievement{\faCertificate} 
+  {\href{https://www.coursera.org/verify/WYCY2A5EZ6RG}{Introduction to Realtime Embedded Systems Concepts and Practices}}{University of Boulder Colorado, 2026}
+  \cvachievement{\faCertificate} 
+  {\href{https://www.coursera.org/verify/WYCY2A5EZ6RG}{Linux Systems Programming and Introduction to Buildroot}}{University of Boulder Colorado, 2026}
+  \cvachievement{\faCertificate} 
+  {\href{https://www.coursera.org/verify/QGONDNKH2CED}{Introduction to Embedded Systems Software and Development Environments}}{University of Boulder Colorado, 2026}
+  \cvachievement{\faCertificate} 
+  {\href{https://www.coursera.org/verify/specialization/ZUCSRB5PTGA4}{Open Source Software Development}}{The Linux Foundation, 2025}
 
 \cvsection{Awards}
-
-\cvachievement{\faTrophy}{4 Scholarships}{received in the years 2014-18 for academic performance}
-
-\divider
-
-\cvachievement{\faStar}{Medal for the best bachelor’s degree in the 2018 graduating class}{}
+  \cvachievement{\faTrophy}{4 Scholarships}{received in the years 2014-18 for academic performance}
+  \divider
+  \cvachievement{\faStar}{Medal for the best bachelor’s degree in the 2018 graduating class}{}
 
 % \cvsection{Referenzen}
 % References go here.
 
-\cvsection{Hobbies}
-% Hobbies go here.
-\cvtag{Longboarding}
-\cvtag{Biking}
-\cvtag{Coding} \\
-\cvtag{Cooking}
-\cvtag{Music}
-\cvtag{Hiking}
-
-\cvsection{Interests}
-% Interests go here.
-\cvtag{Robotics}
-\cvtag{IoT}
-\cvtag{Rust}
-\cvtag{Embedded Programming} \\
-\cvtag{Software Automation} \\
-\cvtag{Computer Vision}
+% \cvsection{Hobbies}
+% % Hobbies go here.
+% \cvtag{Longboarding}
+% \cvtag{Biking}
+% \cvtag{Coding} \\
+% \cvtag{Cooking}
+% \cvtag{Music}
+% \cvtag{Hiking}
+%
+% \cvsection{Interests}
+% % Interests go here.
+% \cvtag{Robotics}
+% \cvtag{IoT}
+% \cvtag{Rust}
+% \cvtag{Embedded Programming} \\
+% \cvtag{Software Automation} \\
+% \cvtag{Computer Vision}
 
 \end{paracol}
 
